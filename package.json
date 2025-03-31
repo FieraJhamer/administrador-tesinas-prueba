@@ -1,6 +1,5 @@
 {
   "name": "web",
-  "homepage": "https://fierajhaer.github.io/administrador-tesinas-prueba/",
   "private": false,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +7,6 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

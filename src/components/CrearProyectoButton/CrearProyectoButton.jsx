@@ -54,7 +54,7 @@ export default function CrearProyectoButton({getProyectos}) {
     console.log(formData)
   
     try {
-      const response = await fetch("localhost:3000/proyectos/", {
+      const response = await fetch("http://15.229.111.247:3000/proyectos/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

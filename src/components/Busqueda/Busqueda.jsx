@@ -67,7 +67,7 @@ export default function Busqueda() {
 
   const getProyectos = async () => {
     try {
-      const response = await fetch("localhost:3000/proyectos", {
+      const response = await fetch("http://15.229.111.247:3000/proyectos", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +88,7 @@ export default function Busqueda() {
 
   const getFechas = async (proyecto)=>{
     try{
-      const response = await fetch(`localhost:3000/proyectos/${proyecto.id_proyecto}/fechas`,{
+      const response = await fetch(`http://15.229.111.247:3000/proyectos/${proyecto.id_proyecto}/fechas`,{
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -110,7 +110,7 @@ export default function Busqueda() {
 
   const getDocumentos = async (id)=>{
     try{
-      const response = await fetch(`localhost:3000/proyectos/${id}/documentos`,{
+      const response = await fetch(`http://15.229.111.247:3000/proyectos/${id}/documentos`,{
         method: "GET",
         headers: {
           "Content-Type": "application/json",

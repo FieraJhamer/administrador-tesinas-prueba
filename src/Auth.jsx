@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
   });
 
   const login = async (nombre, password, ok, error) => {
-    const response = await fetch("http://15.229.116.114:3000/login", {
+    const response = await fetch("localhost:3000/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nombre, password }),

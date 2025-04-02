@@ -28,7 +28,7 @@ const RegistroUsuarios = () => {
 
     const obtenerUsuarios = async () => {
       try {
-        const response = await fetch("http://15.229.111.247:3000/usuarios", {
+        const response = await fetch("https://administrador-tesinas.duckdns.org/api/usuarios", {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${sesion.token}`
@@ -48,7 +48,7 @@ const RegistroUsuarios = () => {
 
     const eliminarUsuario = async (id) => {
       try {
-        const response = await fetch(`http://15.229.111.247:3000/usuarios/${id}`, {
+        const response = await fetch(`https://administrador-tesinas.duckdns.org/api/usuarios/${id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -132,7 +132,7 @@ const RegistroUsuarios = () => {
         
         
         try {
-            const response = await fetch("http://15.229.111.247:3000/usuarios", {
+            const response = await fetch("https://administrador-tesinas.duckdns.org/api/usuarios", {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${sesion.token}`,
@@ -174,7 +174,7 @@ const RegistroUsuarios = () => {
       const registroFormateado = {...usuario, nombre:nombreFormateado, apellido:apellidoFormateado}
 
       try {
-        const response = await fetch(`http://15.229.111.247:3000/usuarios/${usuario.id_usuario}`, {
+        const response = await fetch(`https://administrador-tesinas.duckdns.org/api/usuarios/${usuario.id_usuario}`, {
             method: "PUT",
             headers: {
                 Authorization: `Bearer ${sesion.token}`,

@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
   });
 
   const login = async (nombre, password, ok, error) => {
-    const response = await fetch("http://15.229.111.247:3000/login", {
+    const response = await fetch("https://administrador-tesinas.duckdns.org/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nombre, password }),

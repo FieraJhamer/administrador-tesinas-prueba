@@ -56,7 +56,7 @@ export default function EditarProyecto({ onClose, proyectoId, getProyectos }) {
     if (proyectoId) {
       const fetchProyecto = async () => {
         try {
-          const response = await fetch(`http://15.229.111.247:3000/proyectos/${proyectoId}`, {
+          const response = await fetch(`https://administrador-tesinas.duckdns.org/api/proyectos/${proyectoId}`, {
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${sesion.token}`,
@@ -145,7 +145,7 @@ export default function EditarProyecto({ onClose, proyectoId, getProyectos }) {
       setLoading(true);
   
       try {
-        const response = await fetch("http://15.229.111.247:3000/files", {
+        const response = await fetch("https://administrador-tesinas.duckdns.org/api/files", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${sesion.token}`,
@@ -228,7 +228,7 @@ export default function EditarProyecto({ onClose, proyectoId, getProyectos }) {
     console.log(data)
   
     try {
-      const response = await fetch(`http://15.229.111.247:3000/proyectos/${proyectoId}`, {
+      const response = await fetch(`https://administrador-tesinas.duckdns.org/api/proyectos/${proyectoId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
